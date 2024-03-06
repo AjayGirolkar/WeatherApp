@@ -33,7 +33,7 @@ struct DailyWeatherView: View {
             Spacer()
             if let max = weather.temp?.max,
                let min = weather.temp?.min {
-                Text("\(max) | \(cityVM.getTimeFor(timestamp: min)) ℉")
+                Text("Min = \(min.formatToTwoDecimal()) °C at \(cityVM.getTimeFor(timestamp: min))")
                     .frame(width: 150)
                 Spacer()
             }

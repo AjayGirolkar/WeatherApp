@@ -11,3 +11,10 @@ struct Temprature: Codable{
     var min: Double?
     var max: Double?
 }
+
+extension Double {
+    
+    func formatToTwoDecimal() -> String {
+       return String(format: "%.2f", self)
+    }
+}

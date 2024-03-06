@@ -12,6 +12,12 @@ struct MenuHeaderView: View {
     @ObservedObject var cityVM: CityViewModal
     @State private var searchTerm = "New York"
     
+    init(cityVM: CityViewModal) {
+        self.cityVM = cityVM
+        UITextField.appearance().clearButtonMode = .whileEditing
+    }
+    
+    
     var body: some View {
         HStack {
             TextField("", text: $searchTerm)
